@@ -77,9 +77,14 @@ em {
     font-style: normal;
 }
 
+svg {
+    fill: var(--table-header-text);
+    transition: 0.5s;
+}
+
 svg:hover {
-    color: var(--table-header-background);
-    transition: 1s;
+    fill: var(--table-header-background);
+    transition: 0.5s;
 }
 
 .stats {

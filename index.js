@@ -19,7 +19,6 @@ const updateclock = setInterval(function() {
   + minutes + "m " + seconds + "s ";
 
   // If the count down is finished
-  console.log(difference) 
   if (difference < 0) {
     clearInterval(updateclock);
     document.getElementById("countdown").innerHTML = "IN PROGRESS";

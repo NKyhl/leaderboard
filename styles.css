@@ -3,7 +3,7 @@
     --foreground-dflt: #6e5914;
     --table-header-background: #130329;
     --table-header-text: #67357a;
-    font-family: Tahoma;
+    font-family: Tahoma, sans-serif;
     text-align: center;
 }
 
@@ -24,7 +24,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 600px, 100%;
     margin: auto
 }
 

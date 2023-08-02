@@ -24,7 +24,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    width: min(600px, calc(100% - 20px));
+    width: min(600px, calc(100vw - 20px));
     margin: auto
 }
 
@@ -35,9 +35,6 @@ h1 {
 
 h2 {
     text-align: left;
-}
-h2:first-of-type {
-    margin-top: 5px
 }
 
 table {

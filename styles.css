@@ -41,7 +41,7 @@ table {
     border-collapse: collapse;
     margin: 25px 10px;
     font-size: 1em;
-    width: max(410px, 100%);
+    width: min(600px, calc(100vw - 20px));
     border: 1px solid var(--foreground-dflt);
     border-radius: 5px;
     overflow: hidden;
@@ -85,5 +85,6 @@ svg:hover {
 }
 
 .stats {
-    width: 410px;
+    margin: auto;
+    width: min(600px, calc(100vw - 20px));
 }

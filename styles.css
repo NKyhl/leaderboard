@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
+
 :root {
     --background-dflt: #dcbb4e;
     --foreground-dflt: #6e5914;
@@ -28,13 +30,36 @@ body {
     margin: auto
 }
 
+.header {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px
+}
+
+svg {
+    margin: auto 10px;
+    fill: var(--table-header-text);
+    transition: 0.5s;
+}
+
+svg:hover {
+    fill: var(--table-header-background);
+}
+
 h1 {
     position: sticky;
-    font-size: 32px;
+    font-size: 48px;
+    font-family: 'Source Code Pro', monospace;
+    line-height: 58px;
+    letter-spacing: -2px;
+    margin: 10px 0px;
+    text-align: left;
 }
 
 h2 {
     text-align: left;
+    font-weight: 600;
 }
 
 table {
@@ -69,22 +94,19 @@ tbody tr:last-of-type {
     border-bottom: 3px solid var(--table-header-background);
 }
 
+tbody tr:hover {
+    font-weight: bold;
+    color: var(--table-header-background);
+    background-color: var(--table-header-text) ;
+    transition: 0.3s;
+}
+
 em {
     color: var(--table-header-text);
     font-style: normal;
 }
 
-svg {
-    fill: var(--table-header-text);
-    transition: 0.5s;
-}
-
-svg:hover {
-    fill: var(--table-header-background);
-    transition: 0.5s;
-}
-
 .stats {
-    margin: auto;
+    margin: 10px;
     width: min(600px, calc(100vw - 20px));
 }

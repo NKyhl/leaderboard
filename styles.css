@@ -5,6 +5,7 @@
     --foreground-dflt: #6e5914;
     --table-header-background: #130329;
     --table-header-text: #67357a;
+    --text-shadow: 0 0 0.1em rgba(0, 0, 0, 0.1);
     font-family: Tahoma, sans-serif;
     text-align: center;
 }
@@ -15,6 +16,7 @@
     --foreground-dflt: #67357a;
     --table-header-background: #c9ab47;
     --table-header-text: #6e5914;
+    --text-shadow: 0 0 0.1em rgba(256, 256, 256, 0.1);
 }
 
 body {
@@ -65,7 +67,7 @@ h2 {
 table {
     border-collapse: collapse;
     margin: 25px 10px;
-    font-size: 1em;
+    font-size: 1.1em;
     width: min(600px, calc(100vw - 20px));
     border: 1px solid var(--foreground-dflt);
     border-radius: 5px;
@@ -87,18 +89,15 @@ th, td {
 
 tbody tr {
     border-bottom: 1px solid var(--foreground-dflt);
-    transition: 1s;
+    transition: color 0.2s;
 }
 
 tbody tr:last-of-type {
     border-bottom: 3px solid var(--table-header-background);
 }
 
-tbody tr:hover {
-    font-weight: bold;
-    color: var(--table-header-background);
-    background-color: var(--table-header-text) ;
-    transition: 0.3s;
+tbody tr:hover{
+    color: var(--table-header-text);
 }
 
 em {

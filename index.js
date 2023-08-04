@@ -16,7 +16,7 @@ const updateclock = setInterval(function() {
 
   // Display the result
   document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  + minutes + "m " + seconds + "s";
 
   // If the count down is finished
   if (difference < 0) {

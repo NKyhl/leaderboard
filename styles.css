@@ -105,7 +105,21 @@ em {
     font-style: normal;
 }
 
-.stats {
+.stats,
+.description {
     margin: 10px;
     width: min(600px, calc(100vw - 20px));
+}
+
+
+li {
+    text-align: left;
+    font-size: 22px;
+    font-weight: 500;
+    list-style: square;
+    padding: 5px;
+}
+
+.description > h2:not(:first-child){
+    margin-top: 40px;
 }

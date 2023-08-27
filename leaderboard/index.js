@@ -25,6 +25,15 @@ const updateclock = setInterval(function() {
   }
 }, 1000);
 
+// Set Site Theme
+const setTheme = (theme) => {
+  const root = document.documentElement;
+  if (theme === 'dark') {
+    root.className = theme
+  } else if (theme === 'light') {
+    root.className = ''
+  }
+}
 
 // Detect Initial System Dark Theme
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -42,14 +51,4 @@ const toggleTheme = function() {
   const root = document.documentElement;
   const newTheme = root.className === 'dark' ? 'light' : 'dark';
   setTheme(newTheme);
-}
-
-// Set Site Theme
-const setTheme = (theme) => {
-  const root = document.documentElement;
-  if (theme === 'dark') {
-    root.className = theme
-  } else if (theme === 'light') {
-    root.className = ''
-  }
 }

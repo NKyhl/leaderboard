@@ -26,10 +26,30 @@ const updateclock = setInterval(function() {
 }, 1000);
 
 
-// Dark Mode
-    
+// Detect Initial System Dark Theme
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  setTheme('dark');
+}
+
+// Detect Changes in System Theme
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+  const newTheme = event.matches ? 'dark' : 'light';
+  setTheme(newTheme);
+});
+
+// Detect Manual Theme Changes (Button Click)
 const toggleTheme = function() {
   const root = document.documentElement;
-  const newTheme = root.className === 'dark' ? '' : 'dark';
-  root.className = newTheme
+  const newTheme = root.className === 'dark' ? 'light' : 'dark';
+  setTheme(newTheme);
+}
+
+// Set Site Theme
+const setTheme = (theme) => {
+  const root = document.documentElement;
+  if (theme === 'dark') {
+    root.className = theme
+  } else if (theme === 'light') {
+    root.className = ''
+  }
 }

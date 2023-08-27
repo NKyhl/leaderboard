@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
 
 :root {
-    --background-dflt: #dcbb4e;
-    --foreground-dflt: #6e5914;
-    --table-header-background: #130329;
-    --table-header-text: #67357a;
+    --background-dflt: #ffffff;
+    --foreground-dflt: #853bec;
+    --accent-dflt: #a78d3b;
+    --table-header-background: #853bec;
+    --table-header-text: #ffffff;
     --text-shadow: 0 0 0.1em rgba(0, 0, 0, 0.1);
     font-family: Tahoma, sans-serif;
     text-align: center;
@@ -14,7 +15,8 @@
 :root.dark {
     --background-dflt: #130329;
     --foreground-dflt: #67357a;
-    --table-header-background: #c9ab47;
+    --accent-dflt: #6e5914;
+    --table-header-background: #a78d3b;
     --table-header-text: #6e5914;
     --text-shadow: 0 0 0.1em rgba(256, 256, 256, 0.1);
 }
@@ -41,7 +43,7 @@ body {
 
 svg {
     margin: auto 10px;
-    fill: var(--table-header-text);
+    fill: var(--accent-dflt);
     transition: 0.5s;
     width: 70px;
     height: 70px;
@@ -115,12 +117,13 @@ tbody tr:last-of-type {
 }
 
 tbody tr:hover{
-    color: var(--table-header-text);
+    color: var(--accent-dflt);
 }
 
 em {
-    color: var(--table-header-text);
+    color: var(--accent-dflt);
     font-style: normal;
+    transition: 1s;
 }
 
 .stats,

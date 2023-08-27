@@ -1,6 +1,6 @@
 const root = document.documentElement;
 
-const countDownDate = new Date("Aug 28, 2023 22:00:00 UTC-5").getTime();
+const countDownDate = new Date("Aug 28, 2023 22:30:00 UTC-4").getTime();
 const updateclock = setInterval(function() {
 
   // Get user's date and time in Eastern

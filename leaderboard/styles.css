@@ -3,6 +3,7 @@
 :root {
     --background-dflt: #ffffff;
     --foreground-dflt: #853bec;
+    --accent-highlighted: #6e5914;
     --accent-dflt: #a78d3b;
     --table-header-background: #853bec;
     --table-header-text: #ffffff;
@@ -16,6 +17,7 @@
     --background-dflt: #130329;
     --foreground-dflt: #67357a;
     --accent-dflt: #6e5914;
+    --accent-highlighted: #a78d3b;
     --table-header-background: #a78d3b;
     --table-header-text: #6e5914;
     --text-shadow: 0 0 0.1em rgba(256, 256, 256, 0.1);
@@ -143,4 +145,14 @@ li {
 
 .description > h2:not(:first-child){
     margin-top: 40px;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+a:hover {
+    color: var(--accent-highlighted);
+    transition: 0.3s;
 }

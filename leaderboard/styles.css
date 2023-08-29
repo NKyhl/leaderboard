@@ -52,7 +52,7 @@ svg {
 }
 
 svg:hover {
-    fill: var(--table-header-background);
+    fill: var(--accent-highlighted);
 }
 
 h1 {

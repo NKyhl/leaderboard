@@ -1,5 +1,6 @@
 const root = document.documentElement;
 
+// Create Countdown until next Competition
 const countDownDate = new Date("Sept 4, 2023 22:30:00 UTC-4").getTime();
 const updateclock = setInterval(function() {
 
@@ -24,6 +25,30 @@ const updateclock = setInterval(function() {
     document.getElementById("countdown").innerHTML = "IN PROGRESS";
   }
 }, 1000);
+
+// Determine Current Leader
+function determineLeader() {
+  const winnerColumn = 1;
+  const rows = document.querySelectorAll('#leaderboard tbody tr');
+  const winnerCounts = {};
+
+  rows.forEach(row => {
+    const columns = row.querySelectorAll('td');
+    if (columns.length > winnerColumn) {
+      const winnerName = columns[winnerColumn].textContent;
+      if (winnerName !== 'TBD') {
+        winnerCounts[winnerName] = (winnerCounts[winnerName] || 0) + 1;
+      }
+    }
+  })
+
+  const leader = Object.entries(winnerCounts).reduce((max, [winner, count]) => 
+    count >= max.count ? { winner, count } : max, { winner: null, count: -1 });
+  
+  document.getElementById("currentLeader").innerHTML = leader.winner;
+
+}
+determineLeader()
 
 // Set Site Theme
 const setTheme = (theme) => {

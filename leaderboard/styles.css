@@ -53,6 +53,7 @@ svg {
 
 svg:hover {
     fill: var(--accent-highlighted);
+    cursor: pointer;
 }
 
 h1 {

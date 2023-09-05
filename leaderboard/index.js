@@ -35,10 +35,22 @@ function determineLeader() {
   rows.forEach(row => {
     const columns = row.querySelectorAll('td');
     if (columns.length > winnerColumn) {
-      const winnerName = columns[winnerColumn].textContent;
-      if (winnerName !== 'TBD') {
-        winnerCounts[winnerName] = (winnerCounts[winnerName] || 0) + 1;
+      // Parse Row for Winners
+      const winnerText = columns[winnerColumn].textContent;
+      let winners = null
+      if (winnerText.includes(',')) {
+        winners = winnerText.split(',')
+      } else {
+        winners = [winnerText]
       }
+
+      // Update Winner Tallies
+      winners.forEach(winner => {
+        winner = winner.trim()
+        if (winner !== 'TBD') {
+          winnerCounts[winner] = (winnerCounts[winner] || 0) + 1;
+        }
+      })
     }
   })
 

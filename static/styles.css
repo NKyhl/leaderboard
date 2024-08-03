@@ -17,11 +17,12 @@
 /* @media (prefers-color-scheme: dark) { */
 :root.dark {
   --background-dflt: #130329;
-  --foreground-dflt: #67357a;
-  --accent-dflt: #6e5914;
-  --accent-highlighted: #a78d3b;
-  --table-header-background: #a78d3b;
-  --table-header-text: #6e5914;
+  --foreground-dflt: #966ac8;
+  --accent-dflt: #cc9814;
+  --accent-highlighted: #cc9814;
+  --table-header-background: #966ac8;
+  --table-header-text: #130329;
+  --table-background: #130329;
   --text-shadow: 0 0 0.1em rgba(256, 256, 256, 0.1);
 }
 
